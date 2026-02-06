@@ -31,7 +31,13 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Compliance Verification:
+- [ ] Spec-Driven Development: Confirmed structured spec exists and is approved before implementation
+- [ ] Pre-Coding Specification: All requirements traceable to specification document
+- [ ] Monorepo Architecture: Solution fits within existing monorepo structure
+- [ ] Security-First API: API security requirements identified (JWT authentication, per-user data isolation)
+- [ ] Production-Quality Code: Performance, error handling, and monitoring requirements defined
+- [ ] Cloud-Native Design: System designed for cloud deployment with scalability in mind
 
 ## Project Structure
 

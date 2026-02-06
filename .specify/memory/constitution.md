@@ -1,55 +1,71 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A (initial version) → 1.0.0
+- Added sections: All principles and governance rules
+- Templates requiring updates: N/A
+- Follow-up TODOs: None
+-->
+# Hackathon-2 Phase-2 Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development (MANDATORY)
+All development must follow spec-driven development using Spec-Kit Plus methodology. No implementation work begins without a structured spec. All code must reference specs for validation and compliance.
+<!-- Rationale: Ensures requirements are clearly understood before implementation, reducing rework and defects -->
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Pre-Coding Specification Requirement
+Structured specifications must be written and approved before any coding begins. All implementations must be traceable back to the specification. This is a NON-NEGOTIABLE requirement.
+<!-- Rationale: Prevents scope creep, ensures alignment with requirements, enables effective testing -->
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Monorepo Architecture Compliance
+Follow strict monorepo architecture principles. All code must reside in the same repository with clear module boundaries. Maintain consistent tooling and dependency management across all modules.
+<!-- Rationale: Simplifies dependency management, enables atomic commits across related changes, improves collaboration -->
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Security-First API Development
+All APIs must be secured by default using JWT authentication. Implement role-based access control and enforce per-user data isolation. Security is not an afterthought.
+<!-- Rationale: Protects user data, prevents unauthorized access, maintains regulatory compliance -->
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Production-Quality Code Standards
+Write production-ready code from the start. Implement proper error handling, logging, monitoring readiness, and performance considerations. No "temporary" or "prototype" code in main branches.
+<!-- Rationale: Reduces technical debt, ensures system reliability, reduces operational burden -->
 
-### [PRINCIPLE_6_NAME]
+### VI. Cloud-Native System Design
+Prepare all systems for cloud deployment. Implement stateless services where possible, support horizontal scaling, implement health checks, and follow 12-factor app principles.
+<!-- Rationale: Enables scalability, supports modern deployment practices, ensures system reliability -->
 
+## Development Workflow
+Development follows incremental implementation with verification at each phase. Use feature flags for incomplete functionality, maintain backward compatibility where required, and implement proper rollback mechanisms.
 
-[PRINCIPLE__DESCRIPTION]
+### Implementation Requirements
+- Incremental development with verification at each phase
+- Code reviews required for all changes
+- Automated testing coverage for all functionality
+- Documentation updates with each feature addition
+- Performance benchmarks maintained
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Security and Data Handling
+All user data must be properly isolated, encrypted in transit and at rest, and accessed only through authenticated channels. Follow security best practices including input validation, output encoding, and proper session management.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Data Isolation Requirements
+- Per-user data access controls
+- Tenant isolation for multi-user systems
+- Audit logging for data access
+- GDPR/privacy compliance
+- Secure data deletion procedures
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other development practices and guidelines. All team members must comply with these principles. Any deviation requires documented justification and approval.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendment Process
+- Changes to this constitution require team consensus
+- Major changes need architectural review
+- Updates must be propagated to all dependent artifacts
+- Team must acknowledge receipt of changes
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Compliance Monitoring
+- Regular compliance reviews during code reviews
+- Automated checks in CI/CD pipeline
+- Training for new team members
+- Periodic constitution reviews and updates
+
+**Version**: 1.0.0 | **Ratified**: 2026-02-05 | **Last Amended**: 2026-02-05
